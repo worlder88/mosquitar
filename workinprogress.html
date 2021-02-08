@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport"  content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css008/reset008.css">
+    <script src="https://kit.fontawesome.com/d450b0e232.js" crossorigin="anonymous"></script>
+    <script src="js008/jquery-3.5.1.min.js"></script>
+    <script src="js008/jquery.mousewheel.min.js"></script>
+    <script src="js008/swiper.min.js"></script>
+    <style>
+        *{margin:0; padding: 0; box-sizing: border-box;}
+        a {text-decoration: none; color: black;}
+        li {text-decoration: none; list-style: none;}
+        
+        #img_box {width: 500px; height: 500px; margin: 0 auto; background: url(images008/fixing.gif)no-repeat center; #ddd; vertical-align: middle; }        
+        
+        #text_box {text-align: center; font-size: 40px; font-weight: bold;}
+        #text_box > span {display: block; font-size: 15px; margin-top: 10px; font-weight: normal; color: red;}
+        
+        #to_home{position: fixed; top: 30px; left: 30px; font-size: 20px; background: }
+        
+        
+    </style>
+    
+</head>
+<body>
+ <div id="wrap">
+     <div id="img_box"></div>
+     
+     <div id="text_box">WORK IN PROGRESS <span>5초 후 <b>'메인페이지'</b>로 이동합니다.</span></div>
+     
+    <div id="to_home"><a href="index.html"><< home</a></div>
+ 
+   </div>
+<script>
+        $(document).ready(function(){
+            
+            // setTimeout("함수", 시간); setTimeout함수는 설정 시간후 함수를 실행을 하는 메소드 입니다.
+            // 아래처럼 하면 되실거예요~~
+
+            setTimeout("$(location).attr('href', '../mosquitar/index.html')", 5000);
+
+//            $(location).attr('href', '../mosquitar/index008.html');
+        });
+            
+    </script>
+
+</body>
+</html>
